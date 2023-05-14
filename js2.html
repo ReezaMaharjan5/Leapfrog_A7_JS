@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Question 2: My education Detial
+    </h1>
+    <script>
+        //Question:2:
+            class internLF{
+                constructor(name, address, email, interests, schoolName){
+                    this.myname = name;
+                    this.myaddress = address;
+                    this.myemail = email;
+                    this.myinterest = interests;
+                    this.myeducation = schoolName[0];
+                    this.myeducation1 = schoolName[1];
+                    this.myeducation2 = schoolName[2];
+
+
+                }
+                myEducation(){
+                let myEducation = `My Educational Detial: \n Name: ${this.myeducation.universityName} , Date: ${this.myeducation.joinDate} \n Name: ${this.myeducation1.universityName}, Date: ${this.myeducation1.joinDate} \n Name: ${this.myeducation2.universityName}, Date: ${this.myeducation2.joinDate},   `;
+                return myEducation;
+                }
+            }
+
+            const reeza = new internLF ("Reeza Maharjan", "Chyasal", "reezamhr.505@gmail.com", "painting, hiking", [{universityName: "Kathmandu University", joinDate: "2018"}, {universityName: "United Academy", joinDate: "2015"}, {universityName: "Adarhsa Vidhya Mandir", joinDate: "2004"}] );
+           
+            console.log(reeza.myEducation());
+
+    </script>
+</body>
+</html>

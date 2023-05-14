@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js assignment 1</title>
+</head>
+<body>
+    <h1>
+        Question 1: Asterisks in pattern
+    </h1>
+    <script>
+        //Question 1: printing the star pattern provided
+            var star="";
+            function functionAsterisks(num){
+                for (let x=0; x<num; x++){
+                    for(let y=0; y<num-x; y++){
+                        star+="*";
+                    }
+                    star += "\n";
+                }
+                console.log(star);
+            }
+
+            functionAsterisks(5);
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Question 4</h1>
+    <script>
+        var numbers = [1, 2, 3, 4];
+ 
+         function transform(collection, tranFunc) {
+         var finalArray = [];
+         
+         for (var i = 0; i < collection.length; i++) {
+             finalArray.push(tranFunc(collection[i]));
+         }
+         return finalArray;
+         }
+ 
+         var output = transform(numbers, function(num) {
+         return num * 2;
+         });
+ 
+         console.log(`The output after multiplying each number by 2 is ${this.output}`);
+ 
+     </script>
+</body>
+</html>
