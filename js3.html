@@ -7,8 +7,8 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Question 3</h1>
     <script>
-        <h1>Question 3</h1>
 
         //Question:3:
             var fruits = [
@@ -19,6 +19,8 @@
 
             function searchByName(array_f, name_f) {
                 for(let i=0; i < array_f.length; i++){
+
+                    //converting into lowercase and comparing
                     if(array_f[i].name.toLowerCase() === name.toLowerCase()) {
                         return array_f[i];
                     }
@@ -27,15 +29,18 @@
         
             function  searchByKey(array_f, property_f, value_f) {
                 for(let i=0; i < array_f.length; i++){
-                    if(array_f[i][property_f] && array_f[i][property_f].toLowerCase() === value_f.toLowerCase()){
+                    if(array_f[i][property_f].toLowerCase() === value_f.toLowerCase()){
                         return array_f[i];
                     }
                 }
             }
 
-            searchByName(fruits, 'apple');
+            let byName = searchByName(fruits, 'apple');
             
-            searchByKey(fruits, 'name', 'apple');
+            let byKey = searchByKey(fruits, 'name', 'apple');
+            
+            console.log( byName);
+            console.log( byKey);
 
     </script>
 </body>
