@@ -23,10 +23,38 @@
                 name: 'Mike',
                 children: [{ id: 6, name: 'Peter' }]
             }
+        };
+
+
+
+        var output = {};
+
+            function arrange1(node) {
+            var obj = {};
+            obj[node.id] = {
+                id: node.id,
+                name: node.name
             };
+            if (node.children) {
+                obj[node.id].children = node.children.map(function(child) {
+                return child.id;
+                });
+                node.children.forEach(function(child) {
+                Object.assign(obj, arrange1(child));
+                });
+            }
+            return obj;
+            }
+
+            for (var key in input) {
+            Object.assign(output, arrange1(input[key]));
+            }
+
+            console.log(output);
 
 
-            
+
+
     </script>
 </body>
 </html>
